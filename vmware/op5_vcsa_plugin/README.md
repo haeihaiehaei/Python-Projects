@@ -1,7 +1,7 @@
-[logo]: https://s29.postimg.org/pm7a5xlk7/python_logo_1.png "Powered by Python")
+![Alt text](https://s29.postimg.org/pm7a5xlk7/python_logo_1.png)
 
 
-> This Op5-plugin will use the GET function to pull the status of the various health APIs avaliable.
+This Op5-plugin will use the GET function to pull the status of the various health APIs avaliable.
 
 Currently you can get:
 
