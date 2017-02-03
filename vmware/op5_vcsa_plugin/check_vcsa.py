@@ -36,11 +36,11 @@ parser = argparse.ArgumentParser(
     epilog='Developed by %s - For more information see: "%s"'
     % (author, url))
 
-parser.add_argument('-u', '--username', dest='username', required=False, help='Username, ex administrator')
-parser.add_argument('-p', '--password', dest='password', required=False, help='Password for the user')
-parser.add_argument('-d', '--domain', dest='domain', required=False, help='domain name for the vcenter')
-parser.add_argument('-U', '--url', dest='url', required=False, help='url to the vcenter')
-parser.add_argument('-c', '--check', dest='check', required=False, help='what are we checking, the following is avaliable: database-storage, load, mem, storage')
+parser.add_argument('-u', '--username', dest='username', required=True, help='Username, ex administrator')
+parser.add_argument('-p', '--password', dest='password', required=True, help='Password for the user')
+parser.add_argument('-d', '--domain', dest='domain', required=True, help='domain name for the vcenter')
+parser.add_argument('-U', '--url', dest='url', required=True, help='url to the vcenter')
+parser.add_argument('-c', '--check', dest='check', required=True, help='what are we checking, the following is avaliable: database-storage, load, mem, storage')
 parser.add_argument('-v', '--version', action='version', version='%(prog)s (version 0.16)')
 
 args = parser.parse_args()
