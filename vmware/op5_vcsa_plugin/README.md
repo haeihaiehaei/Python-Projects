@@ -37,3 +37,10 @@ Use this JSON to POST to /rest/appliance/techpreview/local-accounts/user.
        }
 }
 ```
+
+### Modules needed
+* requests
+* JSON
+* sys
+* argparse
+* base64
