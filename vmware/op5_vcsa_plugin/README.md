@@ -29,8 +29,6 @@ Command> localaccounts.user.add --role operator --username op5 --password
 ##### Need to be logged in as an Admin user.
 
 Use this JSON to POST to /rest/appliance/techpreview/local-accounts/user.
-=======
-Use this JSON to create the local user that we will use to monitor. POST /appliance/techpreview/local-accounts/user
 ```json
 {
     "config": {
