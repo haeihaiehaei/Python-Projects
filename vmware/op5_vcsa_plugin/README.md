@@ -21,6 +21,7 @@ This check needs a local user created on the Appliance, you can create this in t
 
 ### Command Shell
 ######Easier for most people
+
 ```sh
 Command> localaccounts.user.add --role operator --username op5 --password
 ```
@@ -30,7 +31,6 @@ Command> localaccounts.user.add --role operator --username op5 --password
 Use this JSON to POST to /rest/appliance/techpreview/local-accounts/user.
 =======
 Use this JSON to create the local user that we will use to monitor. POST /appliance/techpreview/local-accounts/user
->>>>>>> origin/master
 ```json
 {
     "config": {
