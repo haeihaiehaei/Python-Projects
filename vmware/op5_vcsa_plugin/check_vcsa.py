@@ -1,6 +1,8 @@
 #!/usr/bin/python
 """
-Op5 check to get the health of the VCenter Appliance.
+Op5 check to get the health of the VCenter Appliance via REST API.
+
+Command line example for OP5: $USER1$/check_vcsa_rest.py --username $ARG1$ --password $ARG2$ --url $HOSTNAME$ --domain $ARG3$ --check $ARG4$
 
 Copyright 2017 Martin Persson
 
@@ -12,7 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 """
 
 author = 'Martin Persson'
-url = 'https://github.com/mamykin/Python/blob/master/vmware/vcenter_health_check.py'
+url = 'https://github.com/haeihaiehaei/Python-Projects/blob/master/vmware/op5_vcsa_plugin/check_vcsa.py'
 version = '0.1'
 
 try:
@@ -24,7 +26,7 @@ try:
     import base64
 
 except ImportError:
-    print "Error: missing one of the libraries (numpy, pyfits, scipy, matplotlib)"
+    print "Error: missing one of the libraries (requests, json, sys, argparse, base64)"
     sys.exit()
 
 # Disable the unverified HTTPS warnings. We are not running certificates.
@@ -49,6 +51,7 @@ def login():
 
     credentials = str(args.username) + ":" + str(args.password)
 
+    # To send the authentication header we need to convert it to Base64.
     b64credentials = "Basic" + " " + base64.b64encode(credentials)
 
     url = "https://" + str(args.url) + "." + str(args.domain) + "/rest/com/vmware/cis/session"
@@ -58,6 +61,7 @@ def login():
         'authorization': b64credentials,
     }
 
+    # Set the session_id to a global variable so we can use it later.
     global session_id
 
     session = requests.request("POST", url, data=payload, headers=headers, verify=False)
@@ -79,11 +83,14 @@ def health_check():
         print('OK')
         logout()
         sys.exit(0)
+    elif value == 'yellow':
+        print('Warning')
+        sys.exit(1)
     elif value == 'orange':
         print('Warning')
         sys.exit(1)
     elif value == 'red':
-        print('System status is Critical.')
+        print('Critical.')
         logout()
         sys.exit(2)
 
