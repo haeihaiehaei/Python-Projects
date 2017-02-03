@@ -12,11 +12,6 @@ Currently you can get:
 
 
 Example of how to use the command in Op5.
-=======
-![alt text](https://s29.postimg.org/pm7a5xlk7/python_logo_1.png "Powered by Python")
-
-Example line of how to use the command in Op5.
->>>>>>> origin/master
 ```sh
 Command line example for OP5: $USER1$/check_vcsa_rest.py --username $ARG1$ --password $ARG2$ --url $HOSTNAME$ --domain $ARG3$ --check $ARG4$
 ```
