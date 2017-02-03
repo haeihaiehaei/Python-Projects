@@ -1,5 +1,3 @@
-# Python
-
 ![Alt text](https://s29.postimg.org/pm7a5xlk7/python_logo_1.png)
 
 My Python projects, random stuff from my trip of learning Python. Use as you please.
