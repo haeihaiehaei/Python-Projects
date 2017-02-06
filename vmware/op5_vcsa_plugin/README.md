@@ -20,7 +20,7 @@ Command line example for OP5: $USER1$/check_vcsa_rest.py --username $ARG1$ --pas
 The check needs a user with READ-ONLY global permissions.
 
 ### Command Shell (Do not use for now)
-#####Easier for most people
+~~#####Easier for most people
 ######(This will not be working until further upgrades from VMWare.)
 ```sh
 Command> localaccounts.user.add --role operator --username op5 --password
@@ -39,4 +39,4 @@ Use this JSON to POST to /rest/appliance/techpreview/local-accounts/user.
 		"password": ""
        }
 }
-```
+```~~
