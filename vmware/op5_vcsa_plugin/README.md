@@ -10,7 +10,7 @@ Currently you can get:
 
 Example of how to use the command in Op5.
 ```sh
-Command line example for OP5: $USER1$/check_vcsa_rest.py --username $ARG1$ --password $ARG2$ --url $HOSTNAME$ --domain $ARG3$ --check $ARG4$
+Command line example for OP5: $USER1$/check_vcsa.py --username $ARG1$ --password $ARG2$ --url $HOSTNAME$ --domain $ARG3$ --check $ARG4$
 ```
 
 ##### Required Permissions
