@@ -1,4 +1,7 @@
-This Op5-plugin will use the GET function to pull the status of the various health APIs avaliable.
+[logo]: https://s29.postimg.org/pm7a5xlk7/python_logo_1.png "Powered by Python")
+
+
+> This Op5-plugin will use the GET function to pull the status of the various health APIs avaliable.
 
 Currently you can get:
 
@@ -14,11 +17,11 @@ Command line example for OP5: $USER1$/check_vcsa_rest.py --username $ARG1$ --pas
 ```
 
 # User creation
-This check needs a local user created on the Appliance, you can create this in two different ways.
+The check needs a user with READ-ONLY global permissions.
 
-### Command Shell
-######Easier for most people
-
+### Command Shell (Do not use for now)
+#####Easier for most people
+######(This will not be working until further upgrades from VMWare.)
 ```sh
 Command> localaccounts.user.add --role operator --username op5 --password
 ```
@@ -37,10 +40,3 @@ Use this JSON to POST to /rest/appliance/techpreview/local-accounts/user.
        }
 }
 ```
-
-### Modules needed
-* requests
-* JSON
-* sys
-* argparse
-* base64
